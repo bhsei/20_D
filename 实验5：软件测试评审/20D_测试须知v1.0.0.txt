@@ -1,0 +1,35 @@
+小众点评 测试须知 v1.0.0
+
+所有功能性模块的测试，请直接访问http://47.97.231.205:8080/xzdp/#/home进行，可用账号如下。
+用户名：alice、bob(普通用户)
+私钥：5Jxa6s9RtsveuiC3jriYSeXsw2MzjDmNXo3Uii2YJgWmDWUffNc
+用户名：kfc、haidilao(商家用户)
+私钥：5Huu13GDpdAgwoZUyuEnK85xXC2uNnjxqqjXRW1srqoCV6BXGR6
+用户名：admin(管理员账户)
+私钥：5KQwrPbwdL6PhXujxW37FSSQZ1JiwsST4cqQzDeyXtP79zkvFD3
+
+而非功能性模块中，用户友好性、高效性和鲁棒性的测试用例较为主观，请各位自行测试。
+可修改性的测试用例较为复杂，需要准备以下环境。
+
+操作系统：Ubuntu 18.04 LTS
+在终端执行以下指令
+wget https://github.com/eosio/eos/releases/download/v2.0.5/eosio_2.0.5-1-ubuntu-18.04_amd64.deb
+sudo apt install ./eosio_2.0.5-1-ubuntu-18.04_amd64.deb
+cleos wallet create --to-console
+（此时终端会输出钱包的密码，请务必保存下来，之后在测试时执行cleos wallet相关指令时，若需要输入钱包密码则一律输入此处的字符串）
+cleos wallet unlock
+（此处需要输入刚才的钱包密码）
+cleos wallet import
+（此处输入这个私钥5KQwrPbwdL6PhXujxW37FSSQZ1JiwsST4cqQzDeyXtP79zkvFD3）
+即可完成可修改性的测试准备。
+
+在测试可修改性时，请先确认“增加店铺”时，新增加的店铺是需要审核的。验证方法是运行了“增加店铺”用例后，在“我的店铺”中点击刚增加的店铺，里面有个“审核是否通过”，正在审核表示当前是原状态，即合约未被修改。
+请下载“20D_可修改性测试用例附件.zip”，并将其解压至Ubuntu某个目录下，使用终端定位至该目录，执行以下指令
+cleos wallet unlock
+（此处需要输入钱包密码）
+cleos -u http://47.97.231.205:8888 set code shop.info ShopEdited.wasm
+然后刷新网页，请确认“增加店铺”时，新增加的店铺不再需要审核。验证方法同上，“审核是否通过”应为通过审核。此处表明后端的智能合约已被修改。
+在执行完该测试用例后，请恢复原来的状态，即执行以下指令。
+cleos wallet unlock
+（此处需要输入钱包密码）
+cleos -u http://47.97.231.205:8888 set code shop.info Shop.wasm
