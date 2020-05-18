@@ -1,0 +1,351 @@
+{
+    "____comment": "This file was generated with eosio-abigen. DO NOT EDIT ",
+    "version": "eosio::abi/1.1",
+    "types": [],
+    "structs": [
+        {
+            "name": "goods",
+            "base": "",
+            "fields": [
+                {
+                    "name": "gid",
+                    "type": "uint64"
+                },
+                {
+                    "name": "user",
+                    "type": "name"
+                },
+                {
+                    "name": "shopid",
+                    "type": "uint64"
+                },
+                {
+                    "name": "description",
+                    "type": "string"
+                },
+                {
+                    "name": "picture_url",
+                    "type": "string"
+                },
+                {
+                    "name": "goods_name",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "name": "goodserase",
+            "base": "",
+            "fields": [
+                {
+                    "name": "gid",
+                    "type": "uint64"
+                },
+                {
+                    "name": "user",
+                    "type": "name"
+                },
+                {
+                    "name": "shopid",
+                    "type": "uint64"
+                }
+            ]
+        },
+        {
+            "name": "goodsinsert",
+            "base": "",
+            "fields": [
+                {
+                    "name": "user",
+                    "type": "name"
+                },
+                {
+                    "name": "shopid",
+                    "type": "uint64"
+                },
+                {
+                    "name": "goods_name",
+                    "type": "string"
+                },
+                {
+                    "name": "description",
+                    "type": "string"
+                },
+                {
+                    "name": "picture_url",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "name": "goodsupdate",
+            "base": "",
+            "fields": [
+                {
+                    "name": "gid",
+                    "type": "uint64"
+                },
+                {
+                    "name": "user",
+                    "type": "name"
+                },
+                {
+                    "name": "shopid",
+                    "type": "uint64"
+                },
+                {
+                    "name": "goods_name",
+                    "type": "string"
+                },
+                {
+                    "name": "description",
+                    "type": "string"
+                },
+                {
+                    "name": "picture_url",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "name": "shop",
+            "base": "",
+            "fields": [
+                {
+                    "name": "sid",
+                    "type": "uint64"
+                },
+                {
+                    "name": "user",
+                    "type": "name"
+                },
+                {
+                    "name": "is_checked",
+                    "type": "bool"
+                },
+                {
+                    "name": "description",
+                    "type": "string"
+                },
+                {
+                    "name": "picture_url",
+                    "type": "string"
+                },
+                {
+                    "name": "shop_name",
+                    "type": "string"
+                },
+                {
+                    "name": "tag",
+                    "type": "string"
+                },
+                {
+                    "name": "address",
+                    "type": "string"
+                },
+                {
+                    "name": "goodsid",
+                    "type": "uint64[]"
+                }
+            ]
+        },
+        {
+            "name": "shopcheck",
+            "base": "",
+            "fields": [
+                {
+                    "name": "sid",
+                    "type": "uint64"
+                },
+                {
+                    "name": "user",
+                    "type": "name"
+                },
+                {
+                    "name": "is_checked",
+                    "type": "bool"
+                }
+            ]
+        },
+        {
+            "name": "shoperase",
+            "base": "",
+            "fields": [
+                {
+                    "name": "sid",
+                    "type": "uint64"
+                },
+                {
+                    "name": "user",
+                    "type": "name"
+                }
+            ]
+        },
+        {
+            "name": "shopinsert",
+            "base": "",
+            "fields": [
+                {
+                    "name": "user",
+                    "type": "name"
+                },
+                {
+                    "name": "shop_name",
+                    "type": "string"
+                },
+                {
+                    "name": "description",
+                    "type": "string"
+                },
+                {
+                    "name": "picture_url",
+                    "type": "string"
+                },
+                {
+                    "name": "tag",
+                    "type": "string"
+                },
+                {
+                    "name": "address",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "name": "shopupdate",
+            "base": "",
+            "fields": [
+                {
+                    "name": "sid",
+                    "type": "uint64"
+                },
+                {
+                    "name": "user",
+                    "type": "name"
+                },
+                {
+                    "name": "shop_name",
+                    "type": "string"
+                },
+                {
+                    "name": "description",
+                    "type": "string"
+                },
+                {
+                    "name": "picture_url",
+                    "type": "string"
+                },
+                {
+                    "name": "tag",
+                    "type": "string"
+                },
+                {
+                    "name": "address",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "name": "shopuser",
+            "base": "",
+            "fields": [
+                {
+                    "name": "user",
+                    "type": "name"
+                }
+            ]
+        },
+        {
+            "name": "suerase",
+            "base": "",
+            "fields": [
+                {
+                    "name": "user",
+                    "type": "name"
+                }
+            ]
+        },
+        {
+            "name": "suinsert",
+            "base": "",
+            "fields": [
+                {
+                    "name": "user",
+                    "type": "name"
+                }
+            ]
+        }
+    ],
+    "actions": [
+        {
+            "name": "goodserase",
+            "type": "goodserase",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "goodsinsert",
+            "type": "goodsinsert",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "goodsupdate",
+            "type": "goodsupdate",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "shopcheck",
+            "type": "shopcheck",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "shoperase",
+            "type": "shoperase",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "shopinsert",
+            "type": "shopinsert",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "shopupdate",
+            "type": "shopupdate",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "suerase",
+            "type": "suerase",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "suinsert",
+            "type": "suinsert",
+            "ricardian_contract": ""
+        }
+    ],
+    "tables": [
+        {
+            "name": "goods.info",
+            "type": "goods",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        },
+        {
+            "name": "shop.info",
+            "type": "shop",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        },
+        {
+            "name": "shopuser",
+            "type": "shopuser",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        }
+    ],
+    "ricardian_clauses": [],
+    "variants": []
+}

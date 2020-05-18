@@ -1,0 +1,147 @@
+{
+    "____comment": "This file was generated with eosio-abigen. DO NOT EDIT ",
+    "version": "eosio::abi/1.1",
+    "types": [],
+    "structs": [
+        {
+            "name": "user",
+            "base": "",
+            "fields": [
+                {
+                    "name": "user",
+                    "type": "name"
+                },
+                {
+                    "name": "user_name",
+                    "type": "string"
+                },
+                {
+                    "name": "is_merchant",
+                    "type": "bool"
+                },
+                {
+                    "name": "avatar_url",
+                    "type": "string"
+                },
+                {
+                    "name": "phone_number",
+                    "type": "string"
+                },
+                {
+                    "name": "address",
+                    "type": "string"
+                },
+                {
+                    "name": "utils",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "name": "usererase",
+            "base": "",
+            "fields": [
+                {
+                    "name": "user",
+                    "type": "name"
+                }
+            ]
+        },
+        {
+            "name": "userinsert",
+            "base": "",
+            "fields": [
+                {
+                    "name": "user",
+                    "type": "name"
+                },
+                {
+                    "name": "user_name",
+                    "type": "string"
+                },
+                {
+                    "name": "is_merchant",
+                    "type": "bool"
+                },
+                {
+                    "name": "avatar_url",
+                    "type": "string"
+                },
+                {
+                    "name": "phone_number",
+                    "type": "string"
+                },
+                {
+                    "name": "address",
+                    "type": "string"
+                },
+                {
+                    "name": "utils",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "name": "userupdate",
+            "base": "",
+            "fields": [
+                {
+                    "name": "user",
+                    "type": "name"
+                },
+                {
+                    "name": "user_name",
+                    "type": "string"
+                },
+                {
+                    "name": "is_merchant",
+                    "type": "bool"
+                },
+                {
+                    "name": "avatar_url",
+                    "type": "string"
+                },
+                {
+                    "name": "phone_number",
+                    "type": "string"
+                },
+                {
+                    "name": "address",
+                    "type": "string"
+                },
+                {
+                    "name": "utils",
+                    "type": "string"
+                }
+            ]
+        }
+    ],
+    "actions": [
+        {
+            "name": "usererase",
+            "type": "usererase",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "userinsert",
+            "type": "userinsert",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "userupdate",
+            "type": "userupdate",
+            "ricardian_contract": ""
+        }
+    ],
+    "tables": [
+        {
+            "name": "user.info",
+            "type": "user",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        }
+    ],
+    "ricardian_clauses": [],
+    "variants": []
+}
